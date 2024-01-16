@@ -132,7 +132,7 @@ export default function Home() {
             <div className="join-btn">
               or&nbsp;
               <button
-                aria-label="Join existing room"
+                aria-label="Join room"
                 title="Join existing room"
                 onClick={handleGotoJoinPage}
                 className=""
