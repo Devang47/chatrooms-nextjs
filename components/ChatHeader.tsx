@@ -3,7 +3,7 @@ import { useRoomStore } from "@/utils/store";
 import toast from "react-hot-toast";
 import { QRCodeCanvas, QRCodeSVG } from "qrcode.react";
 import { DustbinIcon } from "@/icons";
-import Modal from "./Modal";
+import Modal from "./reusable/Modal";
 
 function ChatHeader({
   roomId,

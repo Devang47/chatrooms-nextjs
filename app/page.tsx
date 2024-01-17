@@ -43,7 +43,7 @@ export default function Home() {
       setTimeout(() => {
         loadingStore.toggleLoading(true);
 
-        router.push(`/room/${roomId}`);
+        router.push(`/room?id=${roomId}`);
       }, 100);
     });
   };

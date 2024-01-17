@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 import ChatHeader from "@/components/ChatHeader";
 import { useLoadingStore, useRoomStore } from "@/utils/store";
 import {
@@ -10,14 +9,13 @@ import {
   deleteRoom,
   getRoomMessages,
 } from "@/utils/Room";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { uploadFile } from "@/utils/storage";
 import toast from "react-hot-toast";
 import { GithubIcon, SendIcon, UploadIcon } from "@/icons";
 import { Message } from "@/components";
 
-function Page() {
-  let roomId = (useParams().id as string).toUpperCase();
+function ChatUi({ id: roomId }: { id: string }) {
   let [chatInput, setChatInput] = useState("");
 
   const scrollToElement = useRef<HTMLDivElement>(null);
@@ -241,4 +239,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default ChatUi;
